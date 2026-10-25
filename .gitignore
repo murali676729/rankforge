@@ -1,0 +1,16 @@
+node_modules/
+
+# Build output (the website is built by GitHub Actions; the desktop app ships as a Release)
+dist/
+dist-app/
+release/
+
+# Rendered videos and test clips
+_clips/
+Claude outputs/
+*.mp4
+*.zip
+
+.DS_Store
+Thumbs.db
+*.log

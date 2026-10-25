@@ -1,0 +1,33 @@
+{
+  "name": "rankforge",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "app:web": "vite build --base ./ --outDir dist-app --emptyOutDir",
+    "app:start": "npm run app:web && electron .",
+    "app:build": "node scripts/make-icon.cjs && npm run app:web && node scripts/package-electron.cjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/outfit": "^5.1.0",
+    "@fontsource/anton": "^5.1.0",
+    "@fontsource/archivo-black": "^5.1.0",
+    "@fontsource/bebas-neue": "^5.1.0",
+    "@fontsource/ibm-plex-mono": "^5.1.0",
+    "@fontsource/rubik": "^5.1.0",
+    "mediabunny": "^1.62.1",
+    "mp4-muxer": "^5.1.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^45.0.0",
+    "vite": "^5.4.11"
+  }
+}
